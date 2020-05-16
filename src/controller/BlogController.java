@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import model.Blog;
 import model.User;
 import service.CRUDOperations;
-import service.ExcelFileStorage;
+//import service.ExcelFileStorage;
 import utility.CheckBlogPost;
 
 
@@ -61,7 +61,8 @@ public class BlogController extends HttpServlet {
 		
 		CRUDOperations crud=new CRUDOperations();
 		List<Blog> listblog = crud.createBlog(blog);
-
+		
+		//listblog.sort((blog b1,blog b2)->b1.getTitleName().compareTo(s2.getName())); 
 		if(check) {
 			request.setAttribute("listBlog", listblog);
 //			request.setAttribute("blog", blog);
